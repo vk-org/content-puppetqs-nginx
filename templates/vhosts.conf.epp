@@ -1,0 +1,9 @@
+# This file is managed by Puppet; do not make changes by hand
+server {
+listen <%= $nginx::port %>;
+  listen [::]:<%= $nginx::port %>;
+
+  root <%= $nginx::root %>;
+  server_name <%= $nginx::server_name %> www.<%= $nginx::server_name %>;
+  }
+}
